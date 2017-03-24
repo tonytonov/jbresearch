@@ -1,0 +1,29 @@
+---
+title: "Avian data: technical report"
+author: "Anton Antonov"
+date: "March 24, 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE, message=FALSE}
+options(digits=3, OutDec=",", warn=-1, stringsAsFactors = F)
+library(MASS)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(broom)
+knitr::opts_chunk$set(echo=T, message=F, warning=F)
+```
+
+Here's the model!
+
+``` {r}
+avian <- read.csv("../clean_data/avianJoined.csv")
+reslm <- avian %>%
+  group_by(Common_name) %>%
+  do(tidy(stepAIC(lm(as.formula(paste0("Vis ~ ", paste(names(avian)[c(4:17)], collapse = " + "))), data=.), trace = F)))
+reslm
+```

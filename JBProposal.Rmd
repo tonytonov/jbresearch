@@ -1,0 +1,8 @@
+---
+title: "Research workflow for JetBrains"
+output: revealjs::revealjs_presentation
+---
+
+## The big picture
+
+Gather data, Process data, Analyze data, Present data
