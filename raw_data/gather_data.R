@@ -3,7 +3,7 @@ options(stringsAsFactors = FALSE)
 
 drv <- dbDriver("SQLite")
 con <- dbConnect(drv, dbname = "raw_data/avian.db")
-res <- dbGetQuery(con, "select * from avian order by Site")
+res <- dbGetQuery(con, "select * from avian order by Site, Subpoint")
 dbDisconnect(con)
 
 #res$Site <- gsub("\\d", "", res$Site)
