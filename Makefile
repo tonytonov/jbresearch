@@ -14,7 +14,7 @@ $(RAW_DATA_DIR)/avianHabitat.csv: $(RAW_DATA_DIR)/avian.db
 $(CLEAN_DATA_DIR)/avianJoined.csv: $(RAW_DATA_DIR)/avianHabitat.csv $(RAW_DATA_DIR)/avianPointTransectSurvey.csv
 	Rscript $(CLEAN_DATA_DIR)/aggregate_data.R
 
-%.html: %.Rmd $(CLEAN_DATA_DIR)/avianJoined.csv
+$(REPORT_OUT_HTML): $(REPORT_SOURCE) $(CLEAN_DATA_DIR)/avianJoined.csv
 	$(KNIT)
 
 default: $(REPORT_OUT_HTML)
@@ -22,6 +22,8 @@ default: $(REPORT_OUT_HTML)
 all: $(REPORT_OUT_HTML)
 
 clean:
-	rm -fv $(CLEAN_DATA_DIR)/%.csv
-	rm -fv $(REPORT_OUT_DOCX)
-	rm -fv $(REPORT_OUT_PDF)
+	rm -frv $(RAW_DATA_DIR)/avianHabitat.csv
+	rm -frv $(CLEAN_DATA_DIR)/avianJoined.csv
+	rm -frv $(REPORT_DIR)/*.html
+	rm -frv $(REPORT_DIR)/*.md
+	rm -frv $(REPORT_DIR)/*/
