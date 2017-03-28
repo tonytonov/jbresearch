@@ -33,6 +33,7 @@ html: $(REPORT_OUT_HTML)
 clean:
 	rm -frv $(RAW_DATA_DIR)/avianHabitat.csv
 	rm -frv $(CLEAN_DATA_DIR)/avianJoined.csv
-	rm -frv $(REPORT_DIR)/*.html
+	rm -frv $(REPORT_OUT_HTML)
+	rm -frv $(REPORT_OUT_DOCX)
 	rm -frv $(REPORT_DIR)/*.md
 	rm -frv $(REPORT_DIR)/*/
