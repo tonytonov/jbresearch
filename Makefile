@@ -30,6 +30,9 @@ docx: $(REPORT_OUT_DOCX)
 
 html: $(REPORT_OUT_HTML)
 
+gdrive: $(REPORT_OUT_DOCX)
+	gdrive import $<
+
 clean:
 	rm -frv $(RAW_DATA_DIR)/avianHabitat.csv
 	rm -frv $(CLEAN_DATA_DIR)/avianJoined.csv

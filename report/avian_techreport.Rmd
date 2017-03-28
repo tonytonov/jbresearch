@@ -10,11 +10,8 @@ output:
 ```{r setup, include=FALSE, message=FALSE}
 options(digits=3, OutDec=",", warn=-1, stringsAsFactors = F)
 library(MASS)
-library(tidyr)
-library(dplyr)
-library(ggplot2)
-library(scales)
 library(broom)
+library(dplyr)
 knitr::opts_chunk$set(echo=T, message=F, warning=F)
 ```
 
