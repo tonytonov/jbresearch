@@ -2,6 +2,7 @@ RDIR = .
 RAW_DATA_DIR = $(RDIR)/raw_data
 CLEAN_DATA_DIR = $(RDIR)/clean_data
 REPORT_DIR = $(RDIR)/report
+DEMO_DIR = $(RDIR)/demo
 
 REPORT_SOURCE = $(wildcard $(REPORT_DIR)/*.Rmd)
 REPORT_OUT_HTML = $(REPORT_SOURCE:.Rmd=.html)
@@ -30,8 +31,10 @@ docx: $(REPORT_OUT_DOCX)
 
 html: $(REPORT_OUT_HTML)
 
-gdrive: $(REPORT_OUT_DOCX)
-	gdrive import $<
+demo: $(DEMO_DIR)/jbresearch.html
+
+$(DEMO_DIR)/jbresearch.html: $(DEMO_DIR)/jbresearch.Rmd
+	sudo Rscript -e 'rmarkdown::render("$<", revealjs::revealjs_presentation())'
 
 clean:
 	rm -frv $(RAW_DATA_DIR)/avianHabitat.csv
@@ -40,3 +43,4 @@ clean:
 	rm -frv $(REPORT_OUT_DOCX)
 	rm -frv $(REPORT_DIR)/*.md
 	rm -frv $(REPORT_DIR)/*/
+	rm -frv $(DEMO_DIR)/*/

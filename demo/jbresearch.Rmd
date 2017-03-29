@@ -1,7 +1,7 @@
 ---
 title: "Engineering reproducible research"
 author: "Anton Antonov"
-date: "30 March 2017"
+date: "30 March 2017<br><br><br><img src='jblogo.png' alt='Logo here' width=150 height=150 style='border-style: none; box-shadow: none'><br><br>https://github.com/tonytonov/jbresearch"
 output:
   revealjs::revealjs_presentation:
     incremental: true
