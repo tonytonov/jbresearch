@@ -17,10 +17,11 @@ knitr::opts_chunk$set(echo=T, message=F, warning=F)
 
 Here's the model!
 
-``` {r}
+``` {r, cache=TRUE}
 avian <- read.csv("../clean_data/avianJoined.csv")
 reslm <- avian %>%
   group_by(Common_name) %>%
   do(tidy(stepAIC(lm(as.formula(paste0("Vis ~ ", paste(names(avian)[c(4:17)], collapse = " + "))), data=.), trace = F)))
 reslm
+Sys.sleep(5)
 ```

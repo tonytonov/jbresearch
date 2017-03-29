@@ -488,7 +488,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h1>Folder/file structure</h1>
 <ul>
 <li>Each research step is physically separated</li>
-<li>Folder structure is standardized, e.g. <code>read.csv(&quot;../raw_data/&quot;)</code> + TAB</li>
+<li>Each step contains only relevant data, code and packages</li>
+<li>Folder structure is standardized, e.g. <code>read.csv(&quot;raw_data/&quot;)</code> + TAB</li>
 <li>(Almost) all paths are relative, not absolute</li>
 <li>Research types can be templated</li>
 <li>Folders for supplementary materials</li>
@@ -505,8 +506,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Better for security, maintenance and control</li>
 </ul>
 </section>
-<section id="r-rstudio-and-rmarkdown" class="slide level2">
-<h1>R, RStudio and rmarkdown</h1>
+<section id="r-ecosystem" class="slide level2">
+<h1>R ecosystem</h1>
 <ul>
 <li>R provides extensive data access capabilities:
 <ul>
@@ -521,7 +522,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="rmarkdown" class="slide level2">
 <h1>rmarkdown</h1>
 <ul>
-<li></li>
+<li>An infrastructure to convert rich text and embed R code results into multiple formats</li>
+<li>Reports are always consistent with data and code</li>
 <li>Caching saves time (careful about possible invalidation though)</li>
 <li></li>
 </ul>
@@ -539,9 +541,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul></li>
 </ul>
 </section>
-<section id="makefile" class="slide level2">
-<h1>Makefile</h1>
+<section id="gnu-make" class="slide level2">
+<h1>GNU Make</h1>
 <ul>
+<li>A command line utility</li>
 <li><p>Syntax:</p>
 <pre><code>target: dependencies ...
         commands

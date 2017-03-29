@@ -34,7 +34,8 @@ Gather data, Process data, Analyze data, Present data
 ## Folder/file structure
 
   * Each research step is physically separated
-  * Folder structure is standardized, e.g. `read.csv("../raw_data/")` + TAB
+  * Each step contains only relevant data, code and packages
+  * Folder structure is standardized, e.g. `read.csv("raw_data/")` + TAB
   * (Almost) all paths are relative, not absolute
   * Research types can be templated
   * Folders for supplementary materials
@@ -48,7 +49,7 @@ Gather data, Process data, Analyze data, Present data
   * Better suited for automated builds (compared to cloud file storage or GDoc)
   * Better for security, maintenance and control
   
-## R, RStudio and rmarkdown
+## R ecosystem
 
   * R provides extensive data access capabilities:
     - database interaction (MySQL, Oracle, PostgreSQL, MongoDB, SQLite, ...)
@@ -59,9 +60,11 @@ Gather data, Process data, Analyze data, Present data
   
 ## rmarkdown
 
-  * 
+  * An infrastructure to convert rich text and embed R code results into multiple formats
+  * Reports are always consistent with data and code
   * Caching saves time (careful about possible invalidation though)
-  * 
+  * `.Rmd` is processed into `.md` via `knitr`
+  * `.md` is processed into final formats via `pandoc`
 
 ## Output file formats
 
@@ -69,11 +72,12 @@ Gather data, Process data, Analyze data, Present data
   * Settings are stored independently for each format in YAML header
   * Style options available: 
     - CSS for HTML
-    - reference styles for HMTL
+    - reference styles for DOCX
     - full LATEX support for PDF
 
-## Makefile
+## GNU Make
 
+  * A command line utility
   * Syntax:
 
         target: dependencies ...
