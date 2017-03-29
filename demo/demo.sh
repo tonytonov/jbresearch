@@ -5,8 +5,15 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -a -q)
 
 cd Dropbox/JetBrains
+rm -rf jbresearch
 git clone https://github.com/tonytonov/jbresearch
 cd jbresearch
+
+make all
+make clean
+make html
+make docx
+make clean
 
 docker build --rm -t tonytonov/jbresearch .
 

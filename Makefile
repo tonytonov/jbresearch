@@ -25,7 +25,7 @@ $(CLEAN_DATA_DIR)/avianJoined.csv: $(RAW_DATA_DIR)/avianHabitat.csv $(RAW_DATA_D
 %.docx: %.Rmd $(CLEAN_DATA_DIR)/avianJoined.csv $(REPORT_DIR)/style_ref.docx
 	$(KNIT_DOCX)
 
-all: $(REPORT_OUT_HTML) $(REPORT_OUT_DOCX)
+all: $(REPORT_OUT_HTML) $(REPORT_OUT_DOCX) $(DEMO_DIR)/jbresearch.html
 
 docx: $(REPORT_OUT_DOCX)
 
