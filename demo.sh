@@ -21,7 +21,7 @@ docker exec -it jbresearch-instance /bin/bash
 cd /home/rstudio/jbresearch
 ./install_gdrive
 gdrive about
-## 4/kCeQskU6JB9DtU-6zVVMXpCle1Gwp7sw9tXdIA9o_bg
+cat gdrive_token
 gdrive list | grep docx
 make clean all
 gdrive upload report/avian_whitepaper.docx
