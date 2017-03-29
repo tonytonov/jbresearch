@@ -1,0 +1,138 @@
+---
+title: "Engineering reproducible research"
+author: "Anton Antonov"
+date: "30 March 2017"
+output:
+  revealjs::revealjs_presentation:
+    incremental: true
+---
+
+## Motivation
+
+  * It's not only __reprodicibility__ per se, it is also 
+    - personal effectiveness
+    - automation
+    - ease of maintenance and readability
+    - avoiding redundancy and inconsistency
+  * Downsides: cognitive effort, need to learn new tools, maintenance cost
+  * Main source of inspiration: _[Reproducible Research with R and R Studio, 2nd Edition](https://www.amazon.com/Reproducible-Research-Studio-Second-Chapman/dp/1498715370)_ by Christopher Gandrud
+
+## The big picture
+
+Gather data, Process data, Analyze data, Present data
+
+## Key solutions (overview)
+
+  * Folder/file structure
+  * Version control
+  * R, RStudio and rmarkdown
+  * Output file formats
+  * GNU Make
+  * Docker
+  * Interacting with Google docs
+  
+## Folder/file structure
+
+  * Each research step is physically separated
+  * Folder structure is standardized, e.g. `read.csv("../raw_data/")` + TAB
+  * (Almost) all paths are relative, not absolute
+  * Research types can be templated
+  * Folders for supplementary materials
+
+## Version control
+
+  * ... is it self-evident?
+  * De-facto standard in development, rising in research
+  * RStudio and github integration
+  * Commit as a trigger for build, a self-sufficient unit of change
+  * Better suited for automated builds (compared to cloud file storage or GDoc)
+  * Better for security, maintenance and control
+  
+## R, RStudio and rmarkdown
+
+  * R provides extensive data access capabilities:
+    - database interaction (MySQL, Oracle, PostgreSQL, MongoDB, SQLite, ...)
+    - APIs interfaces (WebTechnologies task view)
+    - GDocs
+  * R packages -- sustainable way of sharing reusable code
+  * Package infrastructure 
+  
+## rmarkdown
+
+  * 
+  * Caching saves time (careful about possible invalidation though)
+  * 
+
+## Output file formats
+
+  * Standard triple: `HTML`, `DOCX`, `PDF`
+  * Settings are stored independently for each format in YAML header
+  * Style options available: 
+    - CSS for HTML
+    - reference styles for HMTL
+    - full LATEX support for PDF
+
+## Makefile
+
+  * Syntax:
+
+        target: dependencies ...
+                commands
+                ...
+                
+  * Target updates iff any dependency updates
+  * Use bash, R, python, ... -- anything available from shell!
+  * Define multiple scenarios
+
+## Docker 
+
+  * Classic sutiation: each researcher has his own dynamic environment
+  * With docker, research process is integrated with environment (OS kernel, dependencies, R version, package versions, etc.)
+  * Relevant docker images:
+    - `r-base`
+    - `rocker/rstudio` (base + RStudio)
+    - `rocker/tidyverse` (base + RStudio + package collection)
+    - `rocker/verse` (base + RStudio + package collection + TEX)
+    - see full list at https://hub.docker.com/u/rocker/
+
+## Interacting with GDocs
+
+  * Existing R packages: `RGoogleDocs`, `RGoogleData`, `googlesheets`
+  * A better (IMO) alternative: `gdrive`, a command line utility
+  
+## Other ideas and concepts to consider
+
+  * CRAN snapshots, package tree management: `checkpoint`, `miniCRAN` packages
+  * "Reversing" GDocs to Rmds: `gdocs2Rmd` package
+  * ROpenSci community
+
+## Links
+
+  * R, RStudio and rmarkdown
+    http://www.burns-stat.com/r-database-interfaces/
+    https://cran.r-project.org/web/views/WebTechnologies.html
+    http://rmarkdown.rstudio.com/
+    http://rmarkdown.rstudio.com/developer_custom_formats.html
+    http://rmarkdown.rstudio.com/articles_docx.html
+    
+  * Docker
+    https://hub.docker.com/u/rocker/
+    https://benmarwick.github.io/UW-eScience-docker-for-reproducible-research
+    https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image
+    http://dirk.eddelbuettel.com/papers/useR2015_docker.pdf
+    http://www.jonzelner.net/docker/reproducibility/2016/06/03/docker/
+   
+## Links, cont.
+
+  * GNU Make
+    https://www.gnu.org/software/make/
+    http://zmjones.com/make/
+    
+  * Google docs
+    http://www.omegahat.net/RGoogleDocs
+    https://github.com/jennybc/googlesheets
+    https://github.com/prasmussen/gdrive
+    https://github.com/lmmx/gdocs2Rmd/
+
+  * Other ideas
+    http://ropensci.org/
