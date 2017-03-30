@@ -131,19 +131,20 @@ output:
   * "Reversing" GDocs to Rmds: `gdocs2Rmd` package
   * ROpenSci community: http://ropensci.org/
   * R Markdown custom formats
+  * Travis CI, GitLab pipelines
 
 ## Links
 
   * This prototype is available at https://github.com/tonytonov/jbresearch
   * C. Gandrud, _[Reproducible Research with R and R Studio](https://www.amazon.com/Reproducible-Research-Studio-Second-Chapman/dp/1498715370)_
   * R, RStudio and R Markdown  
-    http://www.burns-stat.com/r-database-interfaces/
-    https://cran.r-project.org/web/views/WebTechnologies.html
-    http://rmarkdown.rstudio.com/
-    http://rmarkdown.rstudio.com/developer_custom_formats.html
+    http://www.burns-stat.com/r-database-interfaces/  
+    https://cran.r-project.org/web/views/WebTechnologies.html  
+    http://rmarkdown.rstudio.com/  
+    http://rmarkdown.rstudio.com/developer_custom_formats.html  
     http://rmarkdown.rstudio.com/articles_docx.html
   * GNU Make  
-    https://www.gnu.org/software/make/
+    https://www.gnu.org/software/make/  
     http://zmjones.com/make/
 
 ## Links, cont.
@@ -152,13 +153,14 @@ output:
     https://benmarwick.github.io/UW-eScience-docker-for-reproducible-research  
     https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image  
     http://dirk.eddelbuettel.com/papers/useR2015_docker.pdf  
-    http://www.jonzelner.net/docker/reproducibility/2016/06/03/docker/  
+    http://www.jonzelner.net/docker/reproducibility/2016/06/03/docker/
   * Google docs  
     https://github.com/jennybc/googlesheets  
     https://github.com/prasmussen/gdrive  
-    https://github.com/lmmx/gdocs2Rmd/  
+    https://github.com/lmmx/gdocs2Rmd/
   * Other ideas  
-    https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/
+    https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/  
+    https://docs.travis-ci.com/user/languages/r/
     
 ## Thanks!
 
