@@ -25,13 +25,13 @@ docker create -p 8787:8787 -v /home/tonytonov/Dropbox/JetBrains/jbresearch:/home
 docker start jbresearch-instance
 docker exec -it jbresearch-instance /bin/bash
 
-cd /home/rstudio/jbresearch
+cd /home/rstudio/demo
 ./install_gdrive
 cat gdrive_token
 gdrive about
 gdrive list | grep docx
-make clean all
-gdrive upload report/avian_whitepaper.docx
-gdrive import report/avian_whitepaper.docx
-make clean
+make -C ../ clean all
+gdrive upload ../report/avian_whitepaper.docx
+gdrive import ../report/avian_whitepaper.docx
+make -C ../ clean
 git status
