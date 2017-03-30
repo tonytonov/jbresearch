@@ -83,7 +83,7 @@ output:
   * Caching saves time (careful about possible invalidation though)
   * `.Rmd` is processed into `.md` via `knitr`
   * `.md` is processed into final formats via `pandoc`
-  * MOOCs: [Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown), [Stepik](https://stepik.org/course/724) (in russian) 
+  * MOOCs: [Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown), [Stepik](https://stepik.org/course/724) (in Russian) 
 
 ## Output file formats
 
@@ -109,7 +109,7 @@ output:
 
 ## Docker 
 
-  * Classic sutiation: each researcher has his own dynamic environment
+  * Classic situation: each researcher has his own dynamic environment
   * With docker, research process is integrated with environment (OS kernel, dependencies, R version, package versions, etc.)
   * Relevant docker images:
     - `r-base`
@@ -122,7 +122,7 @@ output:
 
   * Existing R packages: `RGoogleDocs`, `RGoogleData`, `googlesheets`
   * A better (IMO) alternative: `gdrive`, a command line utility
-  * Allows import, export, syncronization, supports revisions
+  * Allows import, export, synchronization, supports revisions
   * Requires manual installation and access token (can be automated)
   
 ## Other ideas and concepts to consider
