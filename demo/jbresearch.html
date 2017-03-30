@@ -55,393 +55,21 @@
       border-color: gray;
     }
 
-
   </style>
 
     <style type="text/css">code{white-space: pre;}</style>
 
-
-<!-- Printing and PDF exports -->
-<script id="paper-css" type="application/dynamic-css">
-
-/* Default Print Stylesheet Template
-   by Rob Glazebrook of CSSnewbie.com
-   Last Updated: June 4, 2008
-
-   Feel free (nay, compelled) to edit, append, and
-   manipulate this file as you see fit. */
-
-
-@media print {
-
-	/* SECTION 1: Set default width, margin, float, and
-	   background. This prevents elements from extending
-	   beyond the edge of the printed page, and prevents
-	   unnecessary background images from printing */
-	html {
-		background: #fff;
-		width: auto;
-		height: auto;
-		overflow: visible;
-	}
-	body {
-		background: #fff;
-		font-size: 20pt;
-		width: auto;
-		height: auto;
-		border: 0;
-		margin: 0 5%;
-		padding: 0;
-		overflow: visible;
-		float: none !important;
-	}
-
-	/* SECTION 2: Remove any elements not needed in print.
-	   This would include navigation, ads, sidebars, etc. */
-	.nestedarrow,
-	.controls,
-	.fork-reveal,
-	.share-reveal,
-	.state-background,
-	.reveal .progress,
-	.reveal .backgrounds {
-		display: none !important;
-	}
-
-	/* SECTION 3: Set body font face, size, and color.
-	   Consider using a serif font for readability. */
-	body, p, td, li, div {
-		font-size: 20pt!important;
-		font-family: Georgia, "Times New Roman", Times, serif !important;
-		color: #000;
-	}
-
-	/* SECTION 4: Set heading font face, sizes, and color.
-	   Differentiate your headings from your body text.
-	   Perhaps use a large sans-serif for distinction. */
-	h1,h2,h3,h4,h5,h6 {
-		color: #000!important;
-		height: auto;
-		line-height: normal;
-		font-family: Georgia, "Times New Roman", Times, serif !important;
-		text-shadow: 0 0 0 #000 !important;
-		text-align: left;
-		letter-spacing: normal;
-	}
-	/* Need to reduce the size of the fonts for printing */
-	h1 { font-size: 28pt !important;  }
-	h2 { font-size: 24pt !important; }
-	h3 { font-size: 22pt !important; }
-	h4 { font-size: 22pt !important; font-variant: small-caps; }
-	h5 { font-size: 21pt !important; }
-	h6 { font-size: 20pt !important; font-style: italic; }
-
-	/* SECTION 5: Make hyperlinks more usable.
-	   Ensure links are underlined, and consider appending
-	   the URL to the end of the link for usability. */
-	a:link,
-	a:visited {
-		color: #000 !important;
-		font-weight: bold;
-		text-decoration: underline;
-	}
-	/*
-	.reveal a:link:after,
-	.reveal a:visited:after {
-		content: " (" attr(href) ") ";
-		color: #222 !important;
-		font-size: 90%;
-	}
-	*/
-
-
-	/* SECTION 6: more reveal.js specific additions by @skypanther */
-	ul, ol, div, p {
-		visibility: visible;
-		position: static;
-		width: auto;
-		height: auto;
-		display: block;
-		overflow: visible;
-		margin: 0;
-		text-align: left !important;
-	}
-	.reveal pre,
-	.reveal table {
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.reveal pre code {
-		padding: 20px;
-		border: 1px solid #ddd;
-	}
-	.reveal blockquote {
-		margin: 20px 0;
-	}
-	.reveal .slides {
-		position: static !important;
-		width: auto !important;
-		height: auto !important;
-
-		left: 0 !important;
-		top: 0 !important;
-		margin-left: 0 !important;
-		margin-top: 0 !important;
-		padding: 0 !important;
-		zoom: 1 !important;
-
-		overflow: visible !important;
-		display: block !important;
-
-		text-align: left !important;
-		-webkit-perspective: none;
-		   -moz-perspective: none;
-		    -ms-perspective: none;
-		        perspective: none;
-
-		-webkit-perspective-origin: 50% 50%;
-		   -moz-perspective-origin: 50% 50%;
-		    -ms-perspective-origin: 50% 50%;
-		        perspective-origin: 50% 50%;
-	}
-	.reveal .slides section {
-		visibility: visible !important;
-		position: static !important;
-		width: auto !important;
-		height: auto !important;
-		display: block !important;
-		overflow: visible !important;
-
-		left: 0 !important;
-		top: 0 !important;
-		margin-left: 0 !important;
-		margin-top: 0 !important;
-		padding: 60px 20px !important;
-		z-index: auto !important;
-
-		opacity: 1 !important;
-
-		page-break-after: always !important;
-
-		-webkit-transform-style: flat !important;
-		   -moz-transform-style: flat !important;
-		    -ms-transform-style: flat !important;
-		        transform-style: flat !important;
-
-		-webkit-transform: none !important;
-		   -moz-transform: none !important;
-		    -ms-transform: none !important;
-		        transform: none !important;
-
-		-webkit-transition: none !important;
-		   -moz-transition: none !important;
-		    -ms-transition: none !important;
-		        transition: none !important;
-	}
-	.reveal .slides section.stack {
-		padding: 0 !important;
-	}
-	.reveal section:last-of-type {
-		page-break-after: avoid !important;
-	}
-	.reveal section .fragment {
-		opacity: 1 !important;
-		visibility: visible !important;
-
-		-webkit-transform: none !important;
-		   -moz-transform: none !important;
-		    -ms-transform: none !important;
-		        transform: none !important;
-	}
-	.reveal section img {
-		display: block;
-		margin: 15px 0px;
-		background: rgba(255,255,255,1);
-		border: 1px solid #666;
-		box-shadow: none;
-	}
-
-	.reveal section small {
-		font-size: 0.8em;
-	}
-
-}  
-</script>
-
-
-<script id="pdf-css" type="application/dynamic-css">
-    
-/**
- * This stylesheet is used to print reveal.js
- * presentations to PDF.
- *
- * https://github.com/hakimel/reveal.js#pdf-export
- */
-
-* {
-	-webkit-print-color-adjust: exact;
-}
-
-body {
-	margin: 0 auto !important;
-	border: 0;
-	padding: 0;
-	float: none !important;
-	overflow: visible;
-}
-
-html {
-	width: 100%;
-	height: 100%;
-	overflow: visible;
-}
-
-/* Remove any elements not needed in print. */
-.nestedarrow,
-.reveal .controls,
-.reveal .progress,
-.reveal .playback,
-.reveal.overview,
-.fork-reveal,
-.share-reveal,
-.state-background {
-	display: none !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	text-shadow: 0 0 0 #000 !important;
-}
-
-.reveal pre code {
-	overflow: hidden !important;
-	font-family: Courier, 'Courier New', monospace !important;
-}
-
-ul, ol, div, p {
-	visibility: visible;
-	position: static;
-	width: auto;
-	height: auto;
-	display: block;
-	overflow: visible;
-	margin: auto;
-}
-.reveal {
-	width: auto !important;
-	height: auto !important;
-	overflow: hidden !important;
-}
-.reveal .slides {
-	position: static;
-	width: 100%;
-	height: auto;
-
-	left: auto;
-	top: auto;
-	margin: 0 !important;
-	padding: 0 !important;
-
-	overflow: visible;
-	display: block;
-
-	-webkit-perspective: none;
-	   -moz-perspective: none;
-	    -ms-perspective: none;
-	        perspective: none;
-
-	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
-	   -moz-perspective-origin: 50% 50%;
-	    -ms-perspective-origin: 50% 50%;
-	        perspective-origin: 50% 50%;
-}
-
-.reveal .slides section {
-	page-break-after: always !important;
-
-	visibility: visible !important;
-	position: relative !important;
-	display: block !important;
-	position: relative !important;
-
-	margin: 0 !important;
-	padding: 0 !important;
-	box-sizing: border-box !important;
-	min-height: 1px;
-
-	opacity: 1 !important;
-
-	-webkit-transform-style: flat !important;
-	   -moz-transform-style: flat !important;
-	    -ms-transform-style: flat !important;
-	        transform-style: flat !important;
-
-	-webkit-transform: none !important;
-	   -moz-transform: none !important;
-	    -ms-transform: none !important;
-	        transform: none !important;
-}
-
-.reveal section.stack {
-	margin: 0 !important;
-	padding: 0 !important;
-	page-break-after: avoid !important;
-	height: auto !important;
-	min-height: auto !important;
-}
-
-.reveal img {
-	box-shadow: none;
-}
-
-.reveal .roll {
-	overflow: visible;
-	line-height: 1em;
-}
-
-/* Slide backgrounds are placed inside of their slide when exporting to PDF */
-.reveal section .slide-background {
-	display: block !important;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: -1;
-}
-
-/* All elements should be above the slide-background */
-.reveal section>* {
-	position: relative;
-	z-index: 1;
-}
-
-/* Display slide speaker notes when 'showNotes' is enabled */
-.reveal .speaker-notes-pdf {
-	display: block;
-	width: 100%;
-	max-height: none;
-	left: auto;
-	top: auto;
-	z-index: 100;
-}
-
-/* Display slide numbers when 'slideNumber' is enabled */
-.reveal .slide-number-pdf {
-	display: block;
-	position: absolute;
-	font-size: 14px;
-}
-
-</script>
-
-
-<script>
-var style = document.createElement( 'style' );
-style.type = 'text/css';
-var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
-var style_script = document.getElementById(style_script_id).text;
-style.innerHTML = style_script;
-document.getElementsByTagName('head')[0].appendChild(style);
-</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'jbresearch_files/reveal.js-3.3.0/css/print/pdf.css' : 'jbresearch_files/reveal.js-3.3.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="jbresearch_files/reveal.js-3.3.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
 
 </head>
 <body>
@@ -467,184 +95,185 @@ Dell Conagher
 <section id="motivation" class="slide level2">
 <h1>Motivation</h1>
 <ul>
-<li>It’s not only <strong>reprodicibility</strong> per se, it is also
+<li class="fragment">It’s not only <strong>reprodicibility</strong> per se, it is also
 <ul>
-<li>personal effectiveness</li>
-<li>automation</li>
-<li>ease of maintenance and readability</li>
-<li>avoiding redundancy and inconsistency</li>
+<li class="fragment">personal effectiveness</li>
+<li class="fragment">automation</li>
+<li class="fragment">ease of maintenance and readability</li>
+<li class="fragment">avoiding redundancy and inconsistency</li>
 </ul></li>
-<li>Downsides: cognitive effort, need to learn new tools, maintenance cost</li>
-<li>Main source of inspiration: <em><a href="https://www.amazon.com/Reproducible-Research-Studio-Second-Chapman/dp/1498715370">Reproducible Research with R and R Studio, 2nd Edition</a></em> by Christopher Gandrud</li>
+<li class="fragment">Downsides: cognitive effort, need to learn new tools, maintenance cost</li>
+<li class="fragment">Main source of inspiration: <em><a href="https://www.amazon.com/Reproducible-Research-Studio-Second-Chapman/dp/1498715370">Reproducible Research with R and R Studio, 2nd Edition</a></em> by Christopher Gandrud</li>
 </ul>
 </section>
 <section id="the-big-picture" class="slide level2">
 <h1>The big picture</h1>
 <ol type="1">
-<li><strong>Gather</strong>
+<li class="fragment"><strong>Gather</strong>
 <ul>
-<li>Interact with APIs, scrap web pages</li>
-<li>Store data</li>
+<li class="fragment">Interact with APIs, scrap web pages</li>
+<li class="fragment">Store data</li>
 </ul></li>
-<li><strong>Process</strong>
+<li class="fragment"><strong>Process</strong>
 <ul>
-<li>Clean data, perform auxiliary transformations</li>
-<li>Aggregate key aspects of interest</li>
+<li class="fragment">Clean data, perform auxiliary transformations</li>
+<li class="fragment">Aggregate key aspects of interest</li>
 </ul></li>
-<li><strong>Analyze</strong>
+<li class="fragment"><strong>Analyze</strong>
 <ul>
-<li>Gather statistics, build models</li>
-<li>Visualize</li>
+<li class="fragment">Gather statistics, build models</li>
+<li class="fragment">Visualize</li>
 </ul></li>
-<li><strong>Present</strong>
+<li class="fragment"><strong>Present</strong>
 <ul>
-<li>Report findings, provide access to wide audience</li>
-<li>Preserve project for future use</li>
+<li class="fragment">Report findings, provide access to wide audience</li>
+<li class="fragment">Preserve project for future use</li>
 </ul></li>
 </ol>
 </section>
 <section id="key-solutions-overview" class="slide level2">
 <h1>Key solutions (overview)</h1>
 <ul>
-<li>Folder/file structure</li>
-<li>Version control</li>
-<li>R, RStudio and rmarkdown</li>
-<li>Output file formats</li>
-<li>GNU Make</li>
-<li>Docker</li>
-<li>Interacting with Google docs</li>
+<li class="fragment">Folder/file structure</li>
+<li class="fragment">Version control</li>
+<li class="fragment">R, RStudio and rmarkdown</li>
+<li class="fragment">Output file formats</li>
+<li class="fragment">GNU Make</li>
+<li class="fragment">Docker</li>
+<li class="fragment">Interacting with Google docs</li>
 </ul>
 </section>
 <section id="folderfile-structure" class="slide level2">
 <h1>Folder/file structure</h1>
 <ul>
-<li>Each research step is physically separated</li>
-<li>Each step contains only relevant data, code and packages</li>
-<li>Folder structure is standardized, e.g. <code>read.csv(&quot;raw_data/&quot;)</code> + TAB</li>
-<li>(Almost) all paths are relative, not absolute</li>
-<li>Research types can be templated</li>
-<li>Folders for supplementary materials</li>
+<li class="fragment">Each research step is physically separated</li>
+<li class="fragment">Each step contains only relevant data, code and packages</li>
+<li class="fragment">Folder structure is standardized, e.g. <code>read.csv(&quot;raw_data/&quot;)</code> + TAB</li>
+<li class="fragment">(Almost) all paths are relative, not absolute</li>
+<li class="fragment">Research types can be templated</li>
+<li class="fragment">Folders for supplementary materials</li>
 </ul>
 </section>
 <section id="version-control" class="slide level2">
 <h1>Version control</h1>
 <ul>
-<li>… is it self-evident?</li>
-<li>De-facto standard in development, rising in research</li>
-<li>RStudio and github integration</li>
-<li>Commit as a trigger for build, a self-sufficient unit of change</li>
-<li>Better suited for automated builds (compared to cloud file storage or GDoc)</li>
-<li>Better for security, maintenance and control</li>
+<li class="fragment">… is it self-evident?</li>
+<li class="fragment">De-facto standard in development, rising in research</li>
+<li class="fragment">RStudio and github integration</li>
+<li class="fragment">Commit as a trigger for build, a self-sufficient unit of change</li>
+<li class="fragment">Better suited for automated builds (compared to cloud file storage or GDoc)</li>
+<li class="fragment">Better for security, maintenance and control</li>
 </ul>
 </section>
 <section id="r-ecosystem" class="slide level2">
 <h1>R ecosystem</h1>
 <ul>
-<li>R provides extensive data access capabilities:
+<li class="fragment">R provides extensive data access capabilities:
 <ul>
-<li>database interaction (MySQL, Oracle, PostgreSQL, MongoDB, SQLite, …)</li>
-<li>APIs interfaces (WebTechnologies task view)</li>
-<li>GDocs</li>
+<li class="fragment">database interaction (MySQL, Oracle, PostgreSQL, MongoDB, SQLite, …)</li>
+<li class="fragment">APIs interfaces (WebTechnologies task view)</li>
+<li class="fragment">GDocs</li>
 </ul></li>
-<li>R packages – sustainable way of sharing reusable code</li>
-<li>Package infrastructure</li>
+<li class="fragment">R packages – sustainable way of sharing reusable code</li>
+<li class="fragment">Package infrastructure</li>
 </ul>
 </section>
 <section id="r-markdown" class="slide level2">
 <h1>R Markdown</h1>
 <ul>
-<li>An infrastructure to convert rich text and embed R code results into multiple formats</li>
-<li>Reports are always consistent with data and code</li>
-<li>Caching saves time (careful about possible invalidation though)</li>
-<li><code>.Rmd</code> is processed into <code>.md</code> via <code>knitr</code></li>
-<li><code>.md</code> is processed into final formats via <code>pandoc</code></li>
+<li class="fragment">An infrastructure to convert rich text and embed R code results into multiple formats</li>
+<li class="fragment">Reports are always consistent with data and code</li>
+<li class="fragment">Caching saves time (careful about possible invalidation though)</li>
+<li class="fragment"><code>.Rmd</code> is processed into <code>.md</code> via <code>knitr</code></li>
+<li class="fragment"><code>.md</code> is processed into final formats via <code>pandoc</code></li>
+<li class="fragment">MOOCs: <a href="https://www.datacamp.com/courses/reporting-with-r-markdown">Datacamp</a>, <a href="https://stepik.org/course/724">Stepik</a> (in russian)</li>
 </ul>
 </section>
 <section id="output-file-formats" class="slide level2">
 <h1>Output file formats</h1>
 <ul>
-<li>Standard triple: HTML, DOCX, PDF</li>
-<li>Settings are stored independently for each format in YAML header</li>
-<li>Style options available:
+<li class="fragment">Standard triple: HTML, DOCX, PDF</li>
+<li class="fragment">Settings are stored independently for each format in YAML header</li>
+<li class="fragment">Style options available:
 <ul>
-<li>CSS for HTML</li>
-<li>reference styles for DOCX</li>
-<li>full LATEX support for PDF</li>
+<li class="fragment">CSS for HTML</li>
+<li class="fragment">reference styles for DOCX</li>
+<li class="fragment">full LATEX support for PDF</li>
 </ul></li>
 </ul>
 </section>
 <section id="gnu-make" class="slide level2">
 <h1>GNU Make</h1>
 <ul>
-<li>A command line utility for automated builds</li>
-<li><p>Syntax:</p>
+<li class="fragment">A command line utility for automated builds</li>
+<li class="fragment"><p>Syntax:</p>
 <pre><code>target: dependencies ...
         commands
         ...</code></pre></li>
-<li>Target updates iff any dependency updates</li>
-<li>Use bash, R, python, … – anything available from shell!</li>
-<li><p>Define multiple scenarios</p></li>
+<li class="fragment">Target updates iff any dependency updates</li>
+<li class="fragment">Use bash, R, python, … – anything available from shell!</li>
+<li class="fragment"><p>Define multiple scenarios</p></li>
 </ul>
 </section>
 <section id="docker" class="slide level2">
 <h1>Docker</h1>
 <ul>
-<li>Classic sutiation: each researcher has his own dynamic environment</li>
-<li>With docker, research process is integrated with environment (OS kernel, dependencies, R version, package versions, etc.)</li>
-<li>Relevant docker images:
+<li class="fragment">Classic sutiation: each researcher has his own dynamic environment</li>
+<li class="fragment">With docker, research process is integrated with environment (OS kernel, dependencies, R version, package versions, etc.)</li>
+<li class="fragment">Relevant docker images:
 <ul>
-<li><code>r-base</code></li>
-<li><code>rocker/rstudio</code> (base + RStudio)</li>
-<li><code>rocker/tidyverse</code> (base + RStudio + package collection)</li>
-<li><code>rocker/verse</code> (base + RStudio + package collection + TEX)</li>
-<li>see full list at <a href="https://hub.docker.com/u/rocker/" class="uri">https://hub.docker.com/u/rocker/</a></li>
+<li class="fragment"><code>r-base</code></li>
+<li class="fragment"><code>rocker/rstudio</code> (base + RStudio)</li>
+<li class="fragment"><code>rocker/tidyverse</code> (base + RStudio + package collection)</li>
+<li class="fragment"><code>rocker/verse</code> (base + RStudio + package collection + TEX)</li>
+<li class="fragment">see full list at <a href="https://hub.docker.com/u/rocker/" class="uri">https://hub.docker.com/u/rocker/</a></li>
 </ul></li>
 </ul>
 </section>
 <section id="interacting-with-gdocs" class="slide level2">
 <h1>Interacting with GDocs</h1>
 <ul>
-<li>Existing R packages: <code>RGoogleDocs</code>, <code>RGoogleData</code>, <code>googlesheets</code></li>
-<li>A better (IMO) alternative: <code>gdrive</code>, a command line utility</li>
-<li>Allows import, export, syncronization, supports revisions</li>
-<li>Requires manual installation and access token (can be automated)</li>
+<li class="fragment">Existing R packages: <code>RGoogleDocs</code>, <code>RGoogleData</code>, <code>googlesheets</code></li>
+<li class="fragment">A better (IMO) alternative: <code>gdrive</code>, a command line utility</li>
+<li class="fragment">Allows import, export, syncronization, supports revisions</li>
+<li class="fragment">Requires manual installation and access token (can be automated)</li>
 </ul>
 </section>
 <section id="other-ideas-and-concepts-to-consider" class="slide level2">
 <h1>Other ideas and concepts to consider</h1>
 <ul>
-<li>CRAN snapshots, package tree management: <code>checkpoint</code>, <code>miniCRAN</code> packages</li>
-<li>“Reversing” GDocs to Rmds: <code>gdocs2Rmd</code> package</li>
-<li>ROpenSci community: <a href="http://ropensci.org/" class="uri">http://ropensci.org/</a></li>
-<li>R Markdown custom formats</li>
+<li class="fragment">CRAN snapshots, package tree management: <code>checkpoint</code>, <code>miniCRAN</code> packages</li>
+<li class="fragment">“Reversing” GDocs to Rmds: <code>gdocs2Rmd</code> package</li>
+<li class="fragment">ROpenSci community: <a href="http://ropensci.org/" class="uri">http://ropensci.org/</a></li>
+<li class="fragment">R Markdown custom formats</li>
 </ul>
 </section>
 <section id="links" class="slide level2">
 <h1>Links</h1>
 <ul>
-<li>This prototype is available at <a href="https://github.com/tonytonov/jbresearch" class="uri">https://github.com/tonytonov/jbresearch</a></li>
-<li>C. Gandrud, <em><a href="https://www.amazon.com/Reproducible-Research-Studio-Second-Chapman/dp/1498715370">Reproducible Research with R and R Studio</a></em></li>
-<li>R, RStudio and R Markdown<br />
+<li class="fragment">This prototype is available at <a href="https://github.com/tonytonov/jbresearch" class="uri">https://github.com/tonytonov/jbresearch</a></li>
+<li class="fragment">C. Gandrud, <em><a href="https://www.amazon.com/Reproducible-Research-Studio-Second-Chapman/dp/1498715370">Reproducible Research with R and R Studio</a></em></li>
+<li class="fragment">R, RStudio and R Markdown<br />
 <a href="http://www.burns-stat.com/r-database-interfaces/" class="uri">http://www.burns-stat.com/r-database-interfaces/</a> <a href="https://cran.r-project.org/web/views/WebTechnologies.html" class="uri">https://cran.r-project.org/web/views/WebTechnologies.html</a> <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a> <a href="http://rmarkdown.rstudio.com/developer_custom_formats.html" class="uri">http://rmarkdown.rstudio.com/developer_custom_formats.html</a> <a href="http://rmarkdown.rstudio.com/articles_docx.html" class="uri">http://rmarkdown.rstudio.com/articles_docx.html</a></li>
-<li>GNU Make<br />
+<li class="fragment">GNU Make<br />
 <a href="https://www.gnu.org/software/make/" class="uri">https://www.gnu.org/software/make/</a> <a href="http://zmjones.com/make/" class="uri">http://zmjones.com/make/</a></li>
 </ul>
 </section>
 <section id="links-cont." class="slide level2">
 <h1>Links, cont.</h1>
 <ul>
-<li>Docker<br />
+<li class="fragment">Docker<br />
 <a href="https://benmarwick.github.io/UW-eScience-docker-for-reproducible-research" class="uri">https://benmarwick.github.io/UW-eScience-docker-for-reproducible-research</a><br />
 <a href="https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image" class="uri">https://github.com/rocker-org/rocker/wiki/Using-the-RStudio-image</a><br />
 <a href="http://dirk.eddelbuettel.com/papers/useR2015_docker.pdf" class="uri">http://dirk.eddelbuettel.com/papers/useR2015_docker.pdf</a><br />
 <a href="http://www.jonzelner.net/docker/reproducibility/2016/06/03/docker/" class="uri">http://www.jonzelner.net/docker/reproducibility/2016/06/03/docker/</a><br />
 </li>
-<li>Google docs<br />
+<li class="fragment">Google docs<br />
 <a href="https://github.com/jennybc/googlesheets" class="uri">https://github.com/jennybc/googlesheets</a><br />
 <a href="https://github.com/prasmussen/gdrive" class="uri">https://github.com/prasmussen/gdrive</a><br />
 <a href="https://github.com/lmmx/gdocs2Rmd/" class="uri">https://github.com/lmmx/gdocs2Rmd/</a><br />
 </li>
-<li>Other ideas<br />
+<li class="fragment">Other ideas<br />
 <a href="https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/" class="uri">https://blog.rstudio.org/2016/03/21/r-markdown-custom-formats/</a></li>
 </ul>
 </section>
@@ -671,7 +300,6 @@ Dell Conagher
         transition: 'default', // none/fade/slide/convex/concave/zoom
         // Transition style for full page slide backgrounds
         backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
-
 
 
         // Optional reveal.js plugins

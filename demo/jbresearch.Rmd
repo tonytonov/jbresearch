@@ -83,6 +83,7 @@ output:
   * Caching saves time (careful about possible invalidation though)
   * `.Rmd` is processed into `.md` via `knitr`
   * `.md` is processed into final formats via `pandoc`
+  * MOOCs: [Datacamp](https://www.datacamp.com/courses/reporting-with-r-markdown), [Stepik](https://stepik.org/course/724) (in russian) 
 
 ## Output file formats
 
