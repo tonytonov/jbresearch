@@ -26,7 +26,7 @@ docker start jbresearch-instance
 docker exec -it jbresearch-instance /bin/bash
 
 cd /home/rstudio/demo
-./install_gdrive
+./install_gdrive.sh
 cat gdrive_token
 gdrive about
 gdrive list | grep docx
