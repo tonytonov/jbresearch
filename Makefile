@@ -8,8 +8,8 @@ REPORT_SOURCE = $(wildcard $(REPORT_DIR)/*.Rmd)
 REPORT_OUT_HTML = $(REPORT_SOURCE:.Rmd=.html)
 REPORT_OUT_DOCX = $(REPORT_SOURCE:.Rmd=.docx)
 
-KNIT_HTML = Rscript -e 'rmarkdown::render("$<", rmarkdown::html_document())'
-KNIT_DOCX = Rscript -e 'rmarkdown::render("$<", rmarkdown::word_document())'
+KNIT_HTML = Rscript -e 'rmarkdown::render("$<", "html_document")'
+KNIT_DOCX = Rscript -e 'rmarkdown::render("$<", "word_document")'
 
 default: $(REPORT_OUT_HTML) $(REPORT_OUT_DOCX)
 
@@ -34,7 +34,7 @@ html: $(REPORT_OUT_HTML)
 demo: $(DEMO_DIR)/jbresearch.html
 
 $(DEMO_DIR)/jbresearch.html: $(DEMO_DIR)/jbresearch.Rmd
-	sudo Rscript -e 'rmarkdown::render("$<", revealjs::revealjs_presentation())'
+	sudo Rscript -e 'rmarkdown::render("$<")'
 
 clean:
 	rm -frv $(RAW_DATA_DIR)/avianHabitat.csv
