@@ -28,7 +28,7 @@ avi_acc <- avian %>% group_by(Common_name) %>%
 
 # Results
 
-Here's the diagram!
+Here's the diagram!!
 
 ```{r, fig.width = 8, fig.height = 11}
 g <- ggplot(avian, aes(Common_name)) +
